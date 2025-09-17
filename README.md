@@ -1,4 +1,4 @@
-# This repo contains a reproduction of a but in git check-ignore
+# This repo contains a reproduction of a bug in git check-ignore
 
 The bug: `git check-ignore` has a different return code when `-v` is passed and the file checked matches a negated pattern in a .gitignore file.
 
