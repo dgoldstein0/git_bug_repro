@@ -12,11 +12,13 @@ $ git check-ignore -v foo; echo $?
 
 According to the man page, `git check-ignore` should return 0 if the file is ignored and 1 if it is not ignored. So it seems the presence of `-v` should not change the meaning of the return code.
 
-## reproduction steps
+## Reproduction steps
 
 1) find a non-ignored file
 2) add a negated pattern to .gitignore that matches the file
 
 Then `git check-ignore <file>` returns 1 but `git check-ignore -v <file>` returns 0.
 
-expected: both return codes should be 1
+Expected: both return codes should be 1
+
+This is using a fork of git 2.46.0
